@@ -41,6 +41,7 @@ function App() {
         setPainel(PAINEL[0]);
         setOnCheck(false);
         setAnswers([]);
+        setPairsToCheck("");
         break;
       default:
         setPainel(PAINEL[0]);
@@ -88,7 +89,10 @@ function App() {
     let tempArrAwnsers = [];
     let tempPairsToCheck = pairsToCheck.replace(/\s+/g, "");
     let arrPairsToCheck = tempPairsToCheck.match(/.{1,2}/g);
-    if (arrPairsToCheck.length === letterPairs.length){
+    if (arrPairsToCheck === null){
+      level > 1 ? setLevel(prev => prev - 1) : setLevel(level);
+      return
+    } else {
       for (let i in letterPairs){
         if (letterPairs[i] === arrPairsToCheck[i]){
           tempArrAwnsers.push(true);
@@ -98,7 +102,7 @@ function App() {
       }
       setAnswers(tempArrAwnsers);
       setPairsToCheck(arrPairsToCheck.join(" "));
-      if (tempArrAwnsers.every(item => item)){
+      if (arrPairsToCheck.length === letterPairs.length && tempArrAwnsers.every(item => item)){
         level < 11 ? setLevel(prev => prev + 1) : setLevel(level);
       } else {
         level > 1 ? setLevel(prev => prev - 1) : setLevel(level);

@@ -4,21 +4,21 @@
 
 #### DEMO: https://willian-pessoa.github.io/letter-pairs-memo/
 
-#### VIDEO DEMO: soon it's recorded
+#### VIDEO DEMO: https://www.youtube.com/watch?v=9gNI6q5VJVs
 
 # How the app Works
 
-## Main Painel
-#### You start in the main painel where you can see the level (and change it), this level define how many cards of letter pairs going to be show in the memorization painel. Here you can see too the last result, if you are able to recall all the pairs, you ganna see the text right. By the end, how many trys in this session(refresh the page set it to 0), the time you spend in the memorization painel, and the time in recall painel.
+## Main Panel
+#### You start in the main panel where you can see the level (and change it), this level defines how many cards of letter pairs going to be shown in the memorization panel. Here you can see too the last result, if you can recall all the pairs, you ganna see the text right. By the end, how many trys in this session(refresh the page set it to 0), the time you spend in the memorization panel, and the time in the recall panel.
 
-## Memorization Painel
-#### This painel gonna show the cards with the pairs you need to memorize
+## Memorization Panel
+#### This panel gonna show the cards with the pairs you need to memorize
 
-## Recall Painel
-#### Here have a input element, you text the letter pairs with space between the letters("AB CD XW") you can type without spaces ("ABCDXW") too.
+## Recall Panel
+#### Here have an input element, you text the letter pairs with space between the letters("AB CD XW") you can type without spaces ("ABCDXW") too.
 
-## Check painel
-#### You can visualize you answer like cards and compare with the right answer, wrong cards gonna be showed in red color, right cards gonna be showed in green color. 
+## Check panel
+#### You can visualize your answer like cards and compare with the right answer, wrong cards gonna be shown in red color, right cards gonna be shown in green color. 
 
 ## The Letters
-#### The project only use the follow letters to generate the cards: "ABCDEFGJKLMNOPQRSTUVWX", to change this you need to put your desire letters in the const LETTERS in App.js.
+#### The project only uses the follow letters to generate the cards: "ABCDEFGJKLMNOPQRSTUVWX", to change this you need to put your desired letters in the const LETTERS in App.js.

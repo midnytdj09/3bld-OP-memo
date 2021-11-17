@@ -18,6 +18,7 @@ function App() {
   const [answers, setAnswers] = useState([]);
   const [onRight, setOnRight] = useState(null);
   const [numberAttempts, setNumberAttempts] = useState(0);
+  const [parcialResult, setParcialResult] = useState([0, 0])
 
   // CONTROL PAINEL
   const controlPainel = () => {
@@ -132,9 +133,11 @@ function App() {
       if (arrPairsToCheck.length === letterPairs.length && tempArrAwnsers.every(item => item)){
         level < 11 ? setLevel(prev => prev + 1) : setLevel(level);
         setOnRight(true);
+        setParcialResult(prev => [prev[0] + 1, prev[1]]);
       } else {
         level > 1 ? setLevel(prev => prev - 1) : setLevel(level);
         setOnRight(false);
+        setParcialResult(prev => [prev[0], prev[1] + 1]);
       }
     }
  }
@@ -167,7 +170,7 @@ function App() {
       onMemo? <MemoPainel level={level} letterPairs={letterPairs}/> 
       : onRecall ? <RecallPainel pairsToCheck={pairsToCheck} setPairsToCheck={setPairsToCheck}/>
       : onCheck ? <CheckPainel answers={answers} pairsToCheck={pairsToCheck} letterPairs={letterPairs}/>
-      : <StartPainel numberAttempts={numberAttempts} onRight={onRight} timeMemo={timeMemo} timeRecall={timeRecall} level={level} controlLevel={controlLevel}/> 
+      : <StartPainel parcialResult={parcialResult} numberAttempts={numberAttempts} onRight={onRight} timeMemo={timeMemo} timeRecall={timeRecall} level={level} controlLevel={controlLevel}/> 
       }
       <br/>
       <button onClick={() => controlPainel()} className="btn-large">{painel}</button>
@@ -176,7 +179,7 @@ function App() {
   );
 }
 
-function StartPainel({level, controlLevel, timeMemo, timeRecall, onRight, numberAttempts}) {
+function StartPainel({level, controlLevel, timeMemo, timeRecall, onRight, numberAttempts, parcialResult}) {
   return(
     <div className="painel-start">
       <h5>Put Your Desire Level (Max 11)</h5>
@@ -189,11 +192,19 @@ function StartPainel({level, controlLevel, timeMemo, timeRecall, onRight, number
           <i className="material-icons">arrow_upward</i>
         </button>
       </div>
-      <div>
+      <div className="grid-infos">
+        <div>
         <h5>Number Attempts: {numberAttempts}</h5>
         <h5>Last Result: {onRight === null ? "Unkown" : onRight ? "Right" : "Wrong"}</h5>
+        </div>
+        <div>
+        <h5>Total Right: {parcialResult[0]}</h5>
+        <h5>Total Wrong: {parcialResult[1]}</h5>
+        </div>
+        <div className="times">
         <h5>Last Time Memo: {formatTime(timeMemo)}</h5>
         <h5>Last Time Recall: {formatTime(timeRecall)}</h5>
+        </div>
       </div>
     </div>
   );

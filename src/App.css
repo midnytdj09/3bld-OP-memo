@@ -67,3 +67,20 @@ input{
 h6{
   font-size: smaller;
 }
+
+.grid-infos{
+  width: 500px;
+  margin: auto;
+  display: grid;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "r1 r2"
+  "times times";
+}
+
+.times{
+  grid-area: times;
+}

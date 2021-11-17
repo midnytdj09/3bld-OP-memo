@@ -4,7 +4,7 @@
 
 #### DEMO: https://willian-pessoa.github.io/letter-pairs-memo/
 
-#### VIDEO DEMO: https://www.youtube.com/watch?v=9gNI6q5VJVs
+#### VIDEO DEMO: [![LetterPair memory Trainer](https://res.cloudinary.com/marcomontalbano/image/upload/v1637159046/video_to_markdown/images/youtube--9gNI6q5VJVs-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=9gNI6q5VJVs "LetterPair memory Trainer")
 
 # How the app Works
 

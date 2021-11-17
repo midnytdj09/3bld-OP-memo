@@ -90,7 +90,7 @@ function App() {
 
   // function to start/stop and time the memorization
   const memoTimer = () => {
-    let duration = timeMemo;
+    let duration = 0;
     if (!onMemo){
       let interval = setInterval(()=>{
         duration++;
@@ -141,7 +141,7 @@ function App() {
 
  // function to start/stopn and time the memorization
  const recallTimer = () => {
-  let duration = timeRecall;
+  let duration = 0;
   if (!onRecall){
     let interval2 = setInterval(()=>{
       duration++;

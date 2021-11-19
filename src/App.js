@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import {formatTime, generateRandom} from "./helpers.js"
 
 const PAINEL = ["start", "memorized", "check", "do again"];

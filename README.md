@@ -12,6 +12,8 @@
 ## Main Panel
 #### You start in the main panel where you can see the level (and change it), this level defines how many cards of letter pairs going to be shown in the memorization panel. Here you can see too the last result, if you can recall all the pairs, you ganna see the text right. By the end, how many trys in this session(refresh the page set it to 0), the time you spend in the memorization panel, and the time in the recall panel.
 
+![Main Panel](../readme_imgs/memopanel.png)
+
 ## Memorization Panel
 #### This panel gonna show the cards with the pairs you need to memorize
 
